@@ -8,8 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SeekBar;
 
-public class TestSliderThing extends AppCompatActivity {
+public class TestSliderThing extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,8 @@ public class TestSliderThing extends AppCompatActivity {
         setContentView(R.layout.activity_test_slider_thing);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        VerticalSeekBar seekBar = (VerticalSeekBar)findViewById(R.id.seekBar);
+        seekBar.setOnSeekBarChangeListener(this);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -48,5 +51,23 @@ public class TestSliderThing extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+        if (b) {
+            // call to arduino
+        }
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        int x = 4+5;
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        VerticalSeekBar mySeekbar = (VerticalSeekBar)seekBar;
+        mySeekbar.setProgressAndThumb(50);
     }
 }

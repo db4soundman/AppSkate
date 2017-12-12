@@ -23,7 +23,7 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <com.example.rehankhan.testskate1.VerticalSeekBar
-        android:id="@+id/seekBar1"
+        android:id="@+id/seekBar"
         android:layout_width="147dp"
         android:layout_height="362dp"
         android:background="@android:color/holo_red_dark"
