@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppSkate.iml" filepath="$PROJECT_DIR$/AppSkate.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestSkate1.iml" filepath="$PROJECT_DIR$/TestSkate1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
