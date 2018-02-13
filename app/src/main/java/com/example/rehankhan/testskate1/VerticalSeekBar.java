@@ -75,7 +75,13 @@ public class VerticalSeekBar extends AppCompatSeekBar {
                 // Ensure progress stays within boundaries
                 if(progress < 0) {progress = 0;}
                 if(progress > getMax()) {progress = getMax();}
-                setProgress(progress);  // Draw progress
+                setProgress(progress);
+
+
+
+
+                // Draw progress
+
                 if(progress != lastProgress) {
                     // Only enact listener if the progress has actually changed
                     lastProgress = progress;
