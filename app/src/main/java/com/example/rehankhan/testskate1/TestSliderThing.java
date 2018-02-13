@@ -253,7 +253,7 @@ public class TestSliderThing extends AppCompatActivity implements SeekBar.OnSeek
             int servoPow = (i *(maxAccel-minAccel))/100;
             servoPow += minAccel;
 
-            mConnectedThread.write(i + "n");
+            mConnectedThread.write(servoPow + "n");
 
             // call to arduino
         }
