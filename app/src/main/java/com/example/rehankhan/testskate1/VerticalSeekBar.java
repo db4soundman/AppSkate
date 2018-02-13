@@ -13,16 +13,20 @@ import android.view.MotionEvent;
  */
 
 public class VerticalSeekBar extends AppCompatSeekBar {
+    private boolean firstDraw;
     public VerticalSeekBar(Context context) {
         super(context);
+        firstDraw=true;
     }
 
     public VerticalSeekBar(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        firstDraw=true;
     }
 
     public VerticalSeekBar(Context context, AttributeSet attrs) {
         super(context, attrs);
+        firstDraw=true;
     }
 
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
@@ -38,7 +42,10 @@ public class VerticalSeekBar extends AppCompatSeekBar {
     protected void onDraw(Canvas c) {
         c.rotate(-90);
         c.translate(-getHeight(), 0);
-
+        if (firstDraw) {
+            this.setProgressAndThumb(50);
+            firstDraw = false;
+        }
         super.onDraw(c);
     }
 

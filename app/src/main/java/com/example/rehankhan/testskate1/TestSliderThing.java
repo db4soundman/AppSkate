@@ -62,7 +62,6 @@ public class TestSliderThing extends AppCompatActivity implements SeekBar.OnSeek
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
-        int x = 4+5;
     }
 
     @Override
